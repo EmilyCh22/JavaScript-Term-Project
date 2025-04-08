@@ -2,22 +2,46 @@
 <html lang="en">
   
 <head>
-  <title></title>
-  <link href="css/games.css" rel="stylesheet">
-  <link rel="icon" type="image/x-icon" href="media/birdIcon.jpg">
+  <title>Puzzle Perch (jigsaw puzzles)</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/puzzles.css" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="media/birdIcon.png">
 </head>
 
-<body>
-  <button style="float:right;" id="goHome">Go back to homepage</button>
-  <h1>Jigsaw Puzzles</h1>
-  A small selection of photos/images will be available for your choosing,<br>
-  and upon selecting one, the image will be broken into smaller grid-like pieces<br>
-  that you will drag and drop into place to complete the puzzle!<br>
-  (there may be an option for choosing how many pieces you want the puzzle to have <strong>:3</strong>)<br>
-  <br>
-  [coming soon...]
-</body>
+<body class="center">
+  <header>
+    <button style="float:right;" id="goHome">Go back to homepage</button>
+    <h1 class="center">Puzzle Perch</h1>
+  </header>
 
-<script src="js/puzzles.js"></script>
+  <div class="imageContainer">
+    <img src="media/chickadee.jpg" alt="Black-Capped Chickadee" class="selectImage">
+    <img src="media/blueJay.jpg" alt="Blue Jay" class="selectImage">
+    <img src="media/ovenbird.jpg" alt="Mistle Thrush" class="selectImage">
+    <img src="media/robin.jpg" alt="European Robin" class="selectImage">
+    <img src="media/blackbird.jpg" alt="Eurasian Blackbird" class="selectImage">
+  </div>
+
+  <select id="pieceCount">
+    <option value="9">3x3 (9 Pieces)</option>
+    <option value="16">4x4 (16 Pieces)</option>
+    <option value="25">5x5 (25 Pieces)</option>
+    <option value="36">6x6 (36 Pieces)</option>
+    <option value="49">7x7 (49 Pieces)</option>
+  </select>
+
+  <div id="puzzleContainer" class="center"></div>
+
+  <p id="howToPlay" class="center">Pick a photo, choose how many pieces you want,
+    <br>and drag & drop the pieces into the correct position to solve the puzzle!
+  </p>
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+  <script src="js/puzzles.js"></script>
+
+</body>
 
 </html>

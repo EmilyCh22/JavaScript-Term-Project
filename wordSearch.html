@@ -2,21 +2,33 @@
 <html lang="en">
   
 <head>
-  <title></title>
-  <link href="css/games.css" rel="stylesheet">
+  <title>Words of a Feather (word search)</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/wordSearch.css" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="media/birdIcon.jpg">
 </head>
 
 <body>
-  <button style="float:right;" id="goHome">Go back to homepage</button>
-  <h1>Word Search</h1>
-  A grid of letters will be randomly generated (potential difficulty levels?),<br>
-  and you must find all of the bird-related words in the grid!<br>
-  (I don't think I'll add a time limit, or maybe, I dunno <strong>:P</strong>)<br>
-  <br>
-  [coming soon...]
-</body>
+  <header>
+    <button style="float:right;" id="goHome">Go back to homepage</button>
+    <center><h1>Words of a Feather</h1></center>
+  </header>
+  
+  <div id="grid" class="grid"></div>
+  <div id="words" class="words">
+    <h2>Word List:</h2>
+    <ul id="wordList"></ul>
+  </div>
+  <center>
+    <div id="modal" class="modal">
+      <h2>Congrats! You found all the words!</h2>
+      <h4>Refresh Tab to restart</h4>
+    </div>
+  </center>
 
-<script src="js/wordSearch.js"></script>
+  <script src="js/wordSearch.js"></script>
+
+</body>
 
 </html>

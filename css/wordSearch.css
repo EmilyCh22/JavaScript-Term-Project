@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Kranky&family=Unkempt:wght@400;700&display=swap');
+
+*{
+  user-select:none;
+  font-family:Unkempt, cursive;
+}
+body{
+  margin-left:auto;
+  margin-right:auto;
+  max-width:800px;
+  min-width:500px;
+  background-image:url("../media/wordSearchBG.png");
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center top;
+  background-attachment:scroll;
+}
+h1{
+  font-family:Kranky, fantasy;
+  padding:5px 10px;
+  text-align:center;
+  width:fit-content;
+  font-size:2.5em;
+  font-weight:bold;
+  background-color:rgb(240, 248, 255, 0.9);
+  border-radius:15px;
+}
+
+#goHome{
+  width:80px;
+  border-radius:5px;
+  cursor:pointer;
+  user-select:none;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(10, 30px);
+  grid-gap:2px;
+  justify-content:center;
+}
+.cell{
+  font-weight:bold;
+  width:30px;
+  height:30px;
+  background-color:rgba(240, 248, 255, 0.8);
+  text-align:center;
+  line-height:30px;
+  border:1px solid pink;
+  border-radius:5px;
+  cursor:pointer;
+}
+#words{
+  margin:50px;
+  width:300px;
+  padding:1px 15px;
+  background-color:snow;
+  border-radius:10px;
+
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+}
+.found{
+  border-color:lightgreen;
+  color:limegreen;
+}
+.strikethrough{
+  text-decoration:line-through;
+}
+.modal{
+  display:none;
+  position:fixed;
+  top:35%;
+  left:35%;
+  width:500px;
+  height:250px;
+  background-color:dimgray;
+  border-radius:10px;
+  text-align:center;
+  padding:20px;
+  box-shadow:0px 0px 15px rgba(0, 0, 0, 0.5);
+  z-index:100;
+}
+.modal h2, h4{
+  margin-top:60px;
+  color:black;
+}
