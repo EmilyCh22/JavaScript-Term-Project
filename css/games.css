@@ -1,6 +1,222 @@
+/* CSS for all pages */
 @import url('https://fonts.googleapis.com/css2?family=Kranky&family=Unkempt:wght@400;700&display=swap');
 
-body{
+*{
   font-family:Unkempt, cursive;
-  font-size:larger;
+  user-select:none;
+}
+
+#goHome{
+  width:80px;
+  border-radius:5px;
+  cursor:pointer;
+  transition:0.3s;
+}
+#goHome:hover{
+  background-color:gainsboro;
+  transition:0.3s;
+}
+
+#howToPlay{
+  font-size:1.25em;
+  width:fit-content;
+  background-color:rgba(240, 248, 255, 0.9);
+  padding:5px 10px;
+  text-align:center;
+  border-radius:10px;
+}
+
+.center{
+  display:block;
+  width:fit-content;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+body{
+  padding: 0 10px 0 10px;
+  background-repeat:no-repeat;
+  background-size:cover;
+  max-width:800px;
+  min-width:500px;
+}
+h1{
+  font-family:Kranky, fantasy;
+  width:fit-content;
+  text-align:center;
+  font-size:2.5em;
+  font-weight:bold;
+  background-color:rgb(240, 248, 255, 0.9);
+  border-radius:15px;
+  padding:5px 10px;
+}
+
+
+
+/* CSS for Puzzles */
+#pieceCount{
+  display:block;
+  margin:0 auto;
+  font-size:medium;
+  border-radius:5px;
+  padding:2px;
+  cursor:pointer;
+}
+
+.imageContainer{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-around;
+  margin-bottom:16px;
+}
+.imageContainer img{
+  width:120px;
+  height:80px;
+  cursor:pointer;
+  border:1px solid aliceblue;
+  border-radius:10px;
+  transition:.3s ease-in-out;
+}
+.imageContainer img:hover{
+  width:135px;
+  height:90px;
+  transition:.3s ease-in-out;
+}
+
+#puzzleContainer{
+  width:600px;
+  height:400px;
+  overflow:hidden;
+  margin-top:16px;
+  position:relative;
+  background:lightskyblue;
+  background-image:url("../media/paleLeaves.jpg");
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:center;
+  border:1px solid midnightblue;
+}
+.puzzlePiece{
+  box-sizing:border-box;
+  cursor:pointer;
+  position:absolute;
+  border:1px solid midnightblue;
+}
+
+
+/* CSS for Word Search */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(10, 30px);
+  grid-gap:2px;
+  justify-content:center;
+}
+.cell{
+  font-weight:bold;
+  width:30px;
+  height:30px;
+  background-color:rgba(240, 248, 255, 0.8);
+  text-align:center;
+  line-height:30px;
+  border:1px solid pink;
+  border-radius:5px;
+  cursor:pointer;
+}
+#words{
+  margin:40px;
+  margin-bottom:30px;
+  width:300px;
+  padding:1px 15px;
+  background-color:snow;
+  border-radius:10px;
+
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+}
+.found{
+  border-color:lightgreen;
+  color:limegreen;
+}
+.strikethrough{
+  text-decoration:line-through;
+}
+.modal{
+  display:none;
+  position:fixed;
+  top:35%;
+  left:35%;
+  width:500px;
+  height:250px;
+  background-color:dimgray;
+  border-radius:10px;
+  text-align:center;
+  padding:20px;
+  box-shadow:0px 0px 15px rgba(0, 0, 0, 0.5);
+  z-index:100;
+}
+.modal h2, h4{
+  margin-top:60px;
+  color:black;
+}
+
+
+/* CSS for Birdcage */
+#wordDisplay{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+
+  font-size:1.5em;
+  margin:10px;
+  font-weight:bold;
+  gap:8px;
+  padding-bottom:20px;
+}
+.letterBox{
+  border-bottom:2px solid black;
+}
+
+#letterButtons{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:10px;
+  width:70%;
+}
+.letterButton{
+  background-color:aliceblue;
+  font-size:1.4em;
+  height:40px;
+  width:40px;
+  border:none;
+  border-radius:6px;
+  transition:.1s;
+}
+.letterButton:hover{
+  background-color:silver;
+  transition:.1s;
+  cursor:pointer;
+}
+
+#status{
+  text-align:center;
+  width:fit-content;
+  margin-top:25px;
+  padding:1px 15px;
+  background-color:aliceblue;
+  border-radius:10px;
+  font-size:1.15em;
+}
+#guessesLeft{
+  font-size:2em;
+}
+#birdAnswer{
+  font-size:1.3em;
+}
+#reloadWin{
+  color:green;
+}
+#reloadLose{
+  color:darkred;
 }

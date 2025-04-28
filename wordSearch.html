@@ -1,31 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  
+
 <head>
   <title>Words of a Feather (word search)</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/games.css" rel="stylesheet">
   <link href="css/wordSearch.css" rel="stylesheet">
-  <link rel="icon" type="image/x-icon" href="media/birdIcon.jpg">
+  <link rel="icon" type="image/x-icon" href="media/birdIcon.png">
+  <style>
+    body {
+      background-image: url("media/wordSearchBG.png");
+      background-position: center;
+      background-attachment: scroll;
+    }
+  </style>
 </head>
 
-<body>
+<body class="center">
   <header>
     <button style="float:right;" id="goHome">Go back to homepage</button>
-    <center><h1>Words of a Feather</h1></center>
+    <h1 class="center">Words of a Feather</h1>
   </header>
-  
+
   <div id="grid" class="grid"></div>
   <div id="words" class="words">
     <h2>Word List:</h2>
     <ul id="wordList"></ul>
   </div>
-  <center>
-    <div id="modal" class="modal">
-      <h2>Congrats! You found all the words!</h2>
-      <h4>Refresh Tab to restart</h4>
-    </div>
-  </center>
+  <div id="modal" class="modal center">
+    <h2>Congrats! You found all the words!</h2>
+    <h4>Refresh Tab to restart</h4>
+  </div>
+
+  <p id="howToPlay" class="center" style="width:70%;">
+    You must find the words from the Word List hidden in the grid.
+    <br>Once you find a word, click the grid and type it in!
+  </p>
 
   <script src="js/wordSearch.js"></script>
 

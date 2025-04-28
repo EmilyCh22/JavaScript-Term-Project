@@ -1,25 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-  
+
 <head>
-  <title></title>
+  <title>Birdcage (hangman)</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="css/games.css" rel="stylesheet">
-  <link rel="icon" type="image/x-icon" href="media/birdIcon.jpg">
+  <link rel="icon" type="image/x-icon" href="media/birdIcon.png">
+  <style>
+    body {
+      background-image: url("media/birdcageBG.jpg");
+      background-position: top;
+      background-attachment: fixed;
+    }
+  </style>
 </head>
 
-<body>
-  <button style="float:right;" id="goHome">Go back to homepage</button>
-  <div style="display:inline-flex; align-items:center;"><h1 style="margin-right:15px">Birdcage<h1><h2>(Hangman lol)</h2></div>
-  <div>
-    Based on/inspired by hangman, but with birds instead!<br>
-    This game will require you to guess a word related to birds (and it may or may not have hints)<br>
-    and each letter you guess correctly, any bird that is in that letter's place will be set free!<br>
-    But if you run out of guesses, then the bird(s) will be trapped forever! <strong>XP</strong><br>
-    <br>
-    [coming soon...]
-  </div>
-</body>
+<body class="center">
+  <header>
+    <button style="float:right; margin-right:5%;" id="goHome">Go back to homepage</button>
+    <h1 class="center">Birdcage</h1>
+  </header>
 
-<script src="js/birdcage.js"></script>
+  <div id="wordDisplay"> <!--Letters go here--> </div>
+
+  <div id="letterButtons" class="center"> <!--A-Z buttons go here (for guessing)--> </div>
+
+  <div id="status" class="center">
+    <p class="guessMsg">Incorrect guesses left: <strong><span id="guessesLeft">6</span></strong></p>
+    <p id="message"></p>
+  </div>
+
+  <p id="howToPlay" class="center" style="margin-top:100px; width:70%;">
+    Click a letter to make a guess; with each correct guess, the letter(s) will be revealed and the bird(s) will be set free!
+    <br>You have a maximun of 6 guesses, so think carefully and choose wisely!
+  </p>
+
+  <script src="js/birdcage.js"></script>
+
+</body>
 
 </html>

@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-  
+
 <head>
   <title>Puzzle Perch (jigsaw puzzles)</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="css/puzzles.css" rel="stylesheet">
+  <link href="css/games.css" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="media/birdIcon.png">
+  <style>
+    body {
+      background-image: url("media/puzzlesBG.jpg");
+      background-position: center;
+      background-attachment: scroll;
+    }
+  </style>
 </head>
 
 <body class="center">
@@ -33,11 +40,12 @@
 
   <div id="puzzleContainer" class="center"></div>
 
-  <p id="howToPlay" class="center">Pick a photo, choose how many pieces you want,
+  <p id="howToPlay" class="center">
+    Pick a photo, choose how many pieces you want,
     <br>and drag & drop the pieces into the correct position to solve the puzzle!
   </p>
-  
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
   <script src="js/puzzles.js"></script>
